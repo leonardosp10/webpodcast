@@ -1,0 +1,8 @@
+//Create the repositore
+git remote add origin https://github.com/leonardosp10/webpodcast
+
+//Send files for server 
+git push --force origin master
+
+//Get files from server
+git pull origin master
