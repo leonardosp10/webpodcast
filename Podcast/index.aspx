@@ -66,7 +66,7 @@
 <div id="player" runat="server">
   <head> 
     <center>  
-       Player: 
+       Player New: 
      </center> 
   </head>
     
