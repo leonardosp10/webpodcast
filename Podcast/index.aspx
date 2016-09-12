@@ -1,13 +1,7 @@
-<%@ Page Language="VB" %>
+<%@ Page Language="VB" src="getxml.cs" %>
 <script runat=server>
-    Protected Function Play_Podcast() As String
-
-        'player.InnerHtml = Server.HtmlEncode("<b>" & "Welcome! You accessed this page at: " & "<b>" & DateTime.Now & "")
-        player.InnerHtml = "<h1>Hello World</h1>"
-        Return ""
-        
-    End Function
-    Protected Function GetXML() As String
+   <% =GetXML()%>. 
+  /*  Protected Function GetXML() As String
         Dim count_id As Int16
         count_id = 0
         Dim url As String
@@ -43,7 +37,7 @@
                     Response.Write(count_id)
 
     End Function
-
+*/
 
 </script>
 
@@ -84,7 +78,7 @@
     
     <br>
         
-     <% =GetXML()%>.         
+   <!-- <% =GetXML()%>.  -->       
      
     </div>
  
