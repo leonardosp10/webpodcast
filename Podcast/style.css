@@ -1,0 +1,75 @@
+audio:hover, audio:focus, audio:active
+{
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+audio
+{
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+}
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+#logo_site{
+  float:left;
+  width:200px;
+  height: 100px;
+  display:inline-block;
+}
+#player{
+  float:left; 
+  width:600px;
+  height: 100px;
+  display:inline-block;
+}
+#info_top{
+  float:left; 
+  width:1090px;
+  height: 100px;
+  display:inline-block;
+}
+#lista_podcast{
+  float:left; 
+  width:700px;
+  height: 700px;
+  display:inline-block;
+}
+#twitter{
+  float:right; 
+  width:220px !important;;
+  height: 500px !important;;
+  display:inline-block;
+}
+.twitter-timeline{
+   width:280px !important;
+  height: 550px !important; 
+}
+#facebook{
+  width:380px !important;
+  height: 500px !important;
+  display:inline-block;
+}  
+
+div{
+    border: 2px solid #73AD21;
+}
