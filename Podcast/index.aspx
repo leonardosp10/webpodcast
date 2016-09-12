@@ -1,6 +1,6 @@
 <%@ Page Language="VB" src="getxml.cs" %>
 <script runat=server>
-   <% =GetXML()%>. 
+   
   /*  Protected Function GetXML() As String
         Dim count_id As Int16
         count_id = 0
@@ -78,7 +78,7 @@
     
     <br>
         
-   <!-- <% =GetXML()%>.  -->       
+   <% =GetXML()%>.        
      
     </div>
  
