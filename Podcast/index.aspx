@@ -52,7 +52,7 @@
  <script type="text/javascript" src="load_podcast.js"> </script>
  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
  <script type="text/javascript" src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"> </script>
-
+ 
 </head>
     
 <body>
@@ -89,26 +89,10 @@
     <div id="twitter"data-width="100%">
  
         <a class="twitter-timeline"  href="https://twitter.com/radiobandnewsfm">Tweets by radiobandnewsfm</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-         <!-- 
-            Information: https://dev.twitter.com/web/embedded-timelines
-                         In  
-         -->      
+        
             
     </div>
-   
-            <!--
-            <a class="twitter-timeline"
-            data-widget-id="600720083413962752"
-            href="https://twitter.com/TwitterDev"
-            width="400"
-            height="400">
-            Tweets by @TwitterDev
-            </a>  --> 
-
-            <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=boechat" class="twitter-hashtag-button" data-show-count="false">Tweet #boechat</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <br>
-            <br>
-            -->
+             
     <div id="facebook" class="fb-page" 
         data-tabs="timeline"
         data-href="https://www.facebook.com/ricardoboechatoficial"
