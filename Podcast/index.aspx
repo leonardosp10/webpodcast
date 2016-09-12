@@ -1,7 +1,7 @@
-<%@ Page Language="VB" src="getxml.cs" %>
+<%@ Page Language="VB" %>
 <script runat=server>
    
-  /*  Protected Function GetXML() As String
+    Protected Function GetXML() As String
         Dim count_id As Int16
         count_id = 0
         Dim url As String
@@ -37,7 +37,7 @@
                     Response.Write(count_id)
 
     End Function
-*/
+
 
 </script>
 
