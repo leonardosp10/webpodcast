@@ -11,6 +11,10 @@
         reader.MoveToContent()
 
         While reader.Read() and count_id <= 10
+           Response.Write("Type: " + reader.NodeType)
+           Response.Write("<br>")
+           Response.Write("Name: " + reader.Name)
+           Response.Write("<br>")
             Select Case reader.NodeType
                 Case System.Xml.XmlNodeType.Element 'Exibir o in?cio do elemento.
 
