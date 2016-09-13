@@ -4,7 +4,7 @@
     Protected Function GetXML() As String
         Dim count_id As Int16
         count_id = 0
-        Dim url As String
+        Dim url,descricao,data As String
         Dim start As Boolean = False
         Const URLString As String = "http://www.band.uol.com.br/rss/colunista_266.xml"
         Dim reader As System.Xml.XmlTextReader = New System.Xml.XmlTextReader(URLString)
@@ -12,45 +12,48 @@
         reader.MoveToContent()
 
         While reader.Read() and count_id <= 5
-      
-          ' Response.Write("Name: " + reader.Name)
-          ' Response.Write("<br>")
+     
            if reader.Name = "item" Then
                start = True
               ' Response.Write("Entrou")
            End if
          if start = True then
-           'Response.Write(reader.Name)
-           'Response.Write("<br>")
+           
             Select Case reader.NodeType
                 
                 Case System.Xml.XmlNodeType.CDATA  'Create the button to play the podcast with url(mp3)
-                                        
-                    Response.Write("<![CDATA[{0}]]>" + reader.Value)
-                    Response.Write("<br>")
+                    descricao =  reader.Value                   
+                    'Response.Write("<![CDATA[{0}]]>" + reader.Value)
+                    'Response.Write("<br>")
                     
                 Case System.Xml.XmlNodeType.Element 'Exibir o in?cio do elemento.
 
                     
                     IF reader.Name = "enclosure" Then
-                       'Response.Write("xxxxxxxxx " + reader.Value)
+                      
                         If reader.HasAttributes Then 'Se existirem atributos
                             count_id = count_id + 1
                             url = reader.GetAttribute("url")
                             Response.Write("<button type=""button"" onclick=""updatePlayDiv('" + url + "')"">play</button>")
+                            Response.Write("Boechat -") 
+                            Response.Write(data)
                             Response.Write("<br>")
+                            Response.Write(descricao)
+                            Response.Write("<br>")
+                            
                          End If
                     End IF
                     If reader.Name = "pubDate" Then
                         reader.Read()
-                        Response.Write(reader.Value)
+                       'Response.Write(reader.Value)
+                        data = reader.Value
                         Response.Write("<br>")
                     End If
                 
             End Select
          End if  
         End While
-                   'Response.Write(count_id)
+                  
 
     End Function
 
