@@ -17,7 +17,7 @@
           ' Response.Write("<br>")
            if reader.Name = "item" Then
                start = True
-               Response.Write("Entrou")
+              ' Response.Write("Entrou")
            End if
          if start = True then
            'Response.Write(reader.Name)
@@ -32,14 +32,15 @@
                     
                 Case System.Xml.XmlNodeType.Element 'Exibir o in?cio do elemento.
 
-                    Response.Write(" " + reader.Value)
-                    If reader.HasAttributes Then 'Se existirem atributos
-                        url = reader.GetAttribute("url")
-                        Response.Write("<button type=""button"" onclick=""updatePlayDiv('" + url + "')"">play</button>")
-                        'Response.Write(url)
-                                               
-                    End If
-
+                    
+                    IF reader.Name = "enclosure" Then
+                       'Response.Write("xxxxxxxxx " + reader.Value)
+                        If reader.HasAttributes Then 'Se existirem atributos
+                            url = reader.GetAttribute("url")
+                            Response.Write("<button type=""button"" onclick=""updatePlayDiv('" + url + "')"">play</button>")
+                            Response.Write("<br>")
+                         End If
+                    End IF
                     If reader.Name = "pubDate" Then
                         reader.Read()
                         Response.Write(reader.Value)
