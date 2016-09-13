@@ -5,22 +5,37 @@
         Dim count_id As Int16
         count_id = 0
         Dim url As String
+        Dim start As Boolean = False
         Const URLString As String = "http://www.band.uol.com.br/rss/colunista_266.xml"
         Dim reader As System.Xml.XmlTextReader = New System.Xml.XmlTextReader(URLString)
         reader.WhitespaceHandling = System.Xml.WhitespaceHandling.None
         reader.MoveToContent()
 
-        While reader.Read() and count_id <= 10
-           Response.Write("Type: " + reader.NodeType)
-           Response.Write("<br>")
-           Response.Write("Name: " + reader.Name)
-           Response.Write("<br>")
+        While reader.Read() and count_id <= 2
+      
+          ' Response.Write("Name: " + reader.Name)
+          ' Response.Write("<br>")
+           if reader.Name = "item" Then
+               start = True
+               Response.Write("Entrou")
+           End if
+         if start = True then
+           'Response.Write(reader.Name)
+           'Response.Write("<br>")
             Select Case reader.NodeType
+                
+                Case System.Xml.XmlNodeType.CDATA  'Create the button to play the podcast with url(mp3)
+                    count_id = count_id + 1
+                    
+                    Response.Write("<![CDATA[{0}]]>" + reader.Value)
+                    Response.Write("<br>")
+                    
                 Case System.Xml.XmlNodeType.Element 'Exibir o in?cio do elemento.
 
                     Response.Write(" " + reader.Value)
                     If reader.HasAttributes Then 'Se existirem atributos
                         url = reader.GetAttribute("url")
+                        Response.Write("<button type=""button"" onclick=""updatePlayDiv('" + url + "')"">play</button>")
                         'Response.Write(url)
                                                
                     End If
@@ -30,13 +45,9 @@
                         Response.Write(reader.Value)
                         Response.Write("<br>")
                     End If
-                Case System.Xml.XmlNodeType.CDATA  'Create the button to play the podcast with url(mp3)
-                    count_id = count_id + 1
-                    Response.Write("<button type=""button"" onclick=""updatePlayDiv('" + url + "')"">play</button>")
-                    Response.Write("<![CDATA[{0}]]>" + reader.Value)
-                    Response.Write("<br>")
+                
             End Select
-           
+         End if  
         End While
                     Response.Write(count_id)
 
