@@ -25,8 +25,7 @@
             Select Case reader.NodeType
                 
                 Case System.Xml.XmlNodeType.CDATA  'Create the button to play the podcast with url(mp3)
-                    count_id = count_id + 1
-                    
+                                        
                     Response.Write("<![CDATA[{0}]]>" + reader.Value)
                     Response.Write("<br>")
                     
@@ -36,6 +35,7 @@
                     IF reader.Name = "enclosure" Then
                        'Response.Write("xxxxxxxxx " + reader.Value)
                         If reader.HasAttributes Then 'Se existirem atributos
+                            count_id = count_id + 1
                             url = reader.GetAttribute("url")
                             Response.Write("<button type=""button"" onclick=""updatePlayDiv('" + url + "')"">play</button>")
                             Response.Write("<br>")
