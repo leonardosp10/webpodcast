@@ -11,7 +11,7 @@
         reader.WhitespaceHandling = System.Xml.WhitespaceHandling.None
         reader.MoveToContent()
 
-        While reader.Read() and count_id <= 2
+        While reader.Read() and count_id <= 5
       
           ' Response.Write("Name: " + reader.Name)
           ' Response.Write("<br>")
@@ -50,7 +50,7 @@
             End Select
          End if  
         End While
-                    Response.Write(count_id)
+                   'Response.Write(count_id)
 
     End Function
 
