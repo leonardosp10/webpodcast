@@ -66,7 +66,7 @@
   
  <script type="text/javascript" src="load_podcast.js"> </script>
  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
- <script type="text/javascript" src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&amp;version=v2.5"> </script>
+ <script type="text/javascript" src = "//connect.facebook.net/en/sdk.js#xfbml=1&amp;version=v2.5"> </script>
  
 </head>
     
