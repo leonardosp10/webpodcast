@@ -71,6 +71,7 @@
 </head>
     
 <body>
+    <div id="Top_Page">
  <div id="logo_site">
      <figure>
      <img src="rss-logo.png" alt="RSS Logo" height="62" width="62">
@@ -87,6 +88,7 @@
 </div>
 <div id="info_top">
     
+</div>
 </div>
 <div id="lista_podcast" runat="server">
    <head> 
