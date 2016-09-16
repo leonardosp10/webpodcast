@@ -26,7 +26,7 @@ body {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    font-family: Verdana;
+  /*  font-family: Verdana; */
 }
 h1 {
     color: navy;
