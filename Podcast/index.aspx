@@ -1,4 +1,4 @@
-<%@ Page Language="VB" %>
+<%@ Page Language="VB" %> 
 <script runat=server>
    
     Protected Function GetXML() As String
@@ -63,42 +63,45 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">  
+ 
+ <script type="text/javascript" src="load_podcast.js"> </script> 
+ 
   
- <script type="text/javascript" src="load_podcast.js"> </script>
  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
  <script type="text/javascript" src = "//connect.facebook.net/en/sdk.js#xfbml=1&amp;version=v2.5"> </script>
  
 </head>
     
 <body>
-    <div id="Top_Page">
- <div id="logo_site">
-     <figure>
-     <img src="rss-logo.png" alt="RSS Logo" height="62" width="62">
-     </figure>
+ <div id="Top_Page">
+    <div id="logo_site">
+        <figure>
+            <img src="rss-logo.png" alt="RSS Logo" height="62" width="62">
+        </figure>
      </div>   
-<div id="player" runat="server">
-  <head> 
-    <center>  
-       Player New: 
-     </center> 
-  </head>
+    <div id="player" runat="server">
+     <head> 
+         <center>  
+            Player New: 
+        </center> 
+     </head>
     
     <audio id="play-url" controls></audio>
-</div>
-<div id="info_top">
+   </div>
+   <div id="info_top">
     
+   </div>
 </div>
-</div>
-<div id="lista_podcast" runat="server">
-   <head> 
-     <center>  
-      Lista Podcasts: 
-     </center> 
-  </head>
+<div id="Principal">
+    <div id="lista_podcast" runat="server">
+        <head> 
+         <center>  
+             Lista Podcasts: 
+         </center> 
+        </head>
     
     <br>
-        
+       
    <% =GetXML()%>.        
      
     </div>
@@ -107,15 +110,17 @@
  
         <a class="twitter-timeline"  href="https://twitter.com/radiobandnewsfm">Tweets by radiobandnewsfm</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         
-            
     </div>
-             
+            
     <div id="facebook" class="fb-page" 
         data-tabs="timeline"
         data-href="https://www.facebook.com/ricardoboechatoficial"
         data-width="380">
     </div>   
-        
+    
+    <div id="facebook" class="fb-page">
+        </div>    
+ </div> 
 </body>
 <!--
 <footer>
