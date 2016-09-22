@@ -117,9 +117,7 @@
         data-href="https://www.facebook.com/ricardoboechatoficial"
         data-width="380">
     </div>   
-    
-    <div id="facebook" class="fb-page">
-        </div>    
+       
  </div> 
 </body>
 <!--
