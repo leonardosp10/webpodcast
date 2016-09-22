@@ -108,14 +108,16 @@
  
     <div id="twitter"data-width="100%">
  
-        <a class="twitter-timeline"  href="https://twitter.com/radiobandnewsfm">Tweets by radiobandnewsfm</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline"  
+        href="https://twitter.com/radiobandnewsfm">Tweets by radiobandnewsfm</a> 
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         
     </div>
             
     <div id="facebook" class="fb-page" 
         data-tabs="timeline"
         data-href="https://www.facebook.com/ricardoboechatoficial"
-        data-width="380">
+        data-width="800">
     </div>   
        
  </div> 
